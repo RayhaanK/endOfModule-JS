@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img[alt='Logo']{
+    width: 10rem;
+}
+
+.navbar {
+    background-color: #1A1C22 !important;
+}
+
+
+.nav-link {
+    color: #F7F7F7  !important;
+    border-bottom: 1px solid #F7F7F7;
+}
+
+.nav-link:hover {
+    background-color: #3D3A50 !important;
+}
+
+.hamburger {
+    color: #F7F7F7 !important;
+    background-color: #F7F7F7 !important;
+}
