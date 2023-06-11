@@ -1,3 +1,9 @@
+const addProduct = document.querySelector('#addProduct');
+const productTitle = document.querySelector('#title')
+const productImage = document.querySelector('#imageLink')
+const productDescription = document.querySelector('#description')
+const productPrice = document.querySelector('#price')
+
 let products = [
     {
         id: 1,
@@ -48,3 +54,30 @@ let products = [
         Amount: "1,199"
     },
 ]
+
+​
+
+addProduct.addEventListener('click', (event) =>{
+    event.preventDefault();
+    if(productTitle.value == ''){
+        alert('Input is Empty!')
+    } 
+    if (productDescription.value == '') {
+        alert("Description needs to be entered!")
+    }
+    if (productImage.value == '') {
+        alert('Image Link is required!')
+    }
+    if (productPrice.value  == '') {
+        alert('Price needs to be entered!')
+    }
+    else {
+        products.push({
+            name: productTitle.value,
+            completed: false,
+            date: new Date()
+    }) 
+        localStorage.setItem('todo-list', JSON.stringify(todoList));
+        renderList();
+    }
+})

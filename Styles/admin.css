@@ -11,17 +11,19 @@ img[alt='Logo']{
 }
 
 img[alt='Logo']:hover {
-   outline: 3px solid #0C0C0F;
+   outline: 3px solid #2f2f2f;
    border-radius: 10px;
 }
 
 body {
     /* background-color: #27323A; */
-    background-color: #0C0C0F;
+    /* background-color: #0C0C0F; */
+    background-color: #2f2f2f;
 }
 
 .navbar {
-    background-color: #1A1C22 !important;
+    /* background-color: #1A1C22 !important; */
+    background-color: #111111 !important;
 }
 
 
@@ -31,7 +33,7 @@ body {
 }
 
 .nav-link:hover {
-    background-color: #0C0C0F !important;
+    background-color: #2f2f2f !important;
 }
 
 .hamburger {
@@ -39,6 +41,7 @@ body {
     background-color: #F7F7F7 !important;
 }
 
-th {
-    color: #1A1C22 !important;
-}
+/* th {
+    background-color: #FFCB74 !important;
+    color: #fff;
+} */
