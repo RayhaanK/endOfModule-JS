@@ -7,7 +7,17 @@
 }
 
 img[alt='Logo']{
-    width: 10rem;
+    width: 11rem;
+}
+
+img[alt='Logo']:hover {
+   outline: 3px solid #0C0C0F;
+   border-radius: 10px;
+}
+
+body {
+    /* background-color: #27323A; */
+    background-color: #0C0C0F;
 }
 
 .navbar {
@@ -21,10 +31,14 @@ img[alt='Logo']{
 }
 
 .nav-link:hover {
-    background-color: #3D3A50 !important;
+    background-color: #0C0C0F !important;
 }
 
 .hamburger {
     color: #F7F7F7 !important;
     background-color: #F7F7F7 !important;
+}
+
+th {
+    color: #1A1C22 !important;
 }
