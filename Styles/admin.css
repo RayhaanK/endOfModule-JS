@@ -35,7 +35,7 @@ body {
 }
 
 .adm {
-    height: 100vh;
+    height: max-content;
 }
 
 .addbtn {
