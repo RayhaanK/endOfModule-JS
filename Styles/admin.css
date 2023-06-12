@@ -18,7 +18,7 @@ img[alt='Logo']:hover {
 body {
     /* background-color: #27323A; */
     /* background-color: #0C0C0F; */
-    background-color: #2f2f2f;
+    background-color: #FFCB74;
 }
 
 .navbar {
@@ -33,12 +33,12 @@ body {
 }
 
 .nav-link:hover {
-    background-color: #2f2f2f !important;
+    background-color: #ffcc74cb !important;
 }
 
 .hamburger {
-    color: #F7F7F7 !important;
-    background-color: #F7F7F7 !important;
+    color: #FFCB74 !important;
+    background-color: #ffcc74cb !important;
 }
 
 /* th {
