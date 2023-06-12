@@ -7,13 +7,31 @@
 }
 
 img[alt='Logo']{
-    width: 10rem;
+    width: 11rem;
 }
 
-.navbar {
-    background-color: #1A1C22 !important;
+img[alt='Logo']:hover {
+   outline: 3px solid #ffcc74cb;
+   border-radius: 10px;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-size: cover;
+    background-image: linear-gradient(180deg, 
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.8) 100%), 
+    url("https://i.postimg.cc/y6yCrXcc/vinicius-amnx-amano-XOnbUXqILzA-unsplash.jpg"); 
+    height: 100vh;
+}
+
+.bold {
+    font-weight: 600;
+    color: #FFCB74;
+}
 
 .nav-link {
     color: #F7F7F7  !important;
@@ -21,10 +39,30 @@ img[alt='Logo']{
 }
 
 .nav-link:hover {
-    background-color: #3D3A50 !important;
+    background-color: #ffcc74cb !important;
 }
 
 .hamburger {
-    color: #F7F7F7 !important;
-    background-color: #F7F7F7 !important;
+    color: #FFCB74 !important;
+    background-color: #ffcc74cb !important;
+}
+
+.landingText {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    flex-direction: column;
+    height: 60vh;
+}
+
+p {
+    font-size: 16px;
+}
+
+.featuredP {
+    background-color: #E8A45D;
+    height: 100vh;
+}
+
+.featuredH {
 }
