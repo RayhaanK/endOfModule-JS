@@ -59,10 +59,95 @@ p {
     font-size: 16px;
 }
 
+
+.boldW {
+    font-weight: 600;
+    color: #fff;
+}
+
+.aboutSection {
+    background-color: #E8A45D;
+    height: fit-content;
+    border-bottom: 1px solid black;
+}
+
+.aboutUs {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+}
+
 .featuredP {
     background-color: #E8A45D;
     height: 100vh;
+    border-bottom: 1px solid black;
 }
 
-.featuredH {
+.contact {
+    background-color: #E8A45D;
+    height: 110vh;
+}
+
+.contactsForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+  }
+  
+  form {
+    width: 70%;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .butn {
+    padding: 0.4rem;
+    width: 7rem;
+  }
+
+footer {
+    height: 100%;
+    background-color: black;
+}
+
+.center {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.icons {
+    
+    text-align: center;
+  }
+
+.copyright {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.cop{
+    display: contents;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
 }
