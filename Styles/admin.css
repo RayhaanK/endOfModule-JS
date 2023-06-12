@@ -16,16 +16,9 @@ img[alt='Logo']:hover {
 }
 
 body {
-    /* background-color: #27323A; */
-    /* background-color: #0C0C0F; */
-    background-color: #FFCB74;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0703;
 }
-
-.navbar {
-    /* background-color: #1A1C22 !important; */
-    background-color: #111111 !important;
-}
-
 
 .nav-link {
     color: #F7F7F7  !important;
@@ -41,7 +34,57 @@ body {
     background-color: #ffcc74cb !important;
 }
 
-/* th {
-    background-color: #FFCB74 !important;
-    color: #fff;
-} */
+.adm {
+    height: 100vh;
+}
+
+.addbtn {
+    background-color: #FFCB74;
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: none;
+}
+
+footer {
+    height: 100%;
+    background-color: black;
+}
+
+.center {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.icons {
+    text-align: center;
+  }
+
+.fa-brands {
+    padding: 5px;
+}
+
+.copyright {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.cop{
+    display: contents;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}

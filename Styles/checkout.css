@@ -7,13 +7,18 @@
 }
 
 img[alt='Logo']{
-    width: 10rem;
+    width: 11rem;
 }
 
-.navbar {
-    background-color: #1A1C22 !important;
+img[alt='Logo']:hover {
+   outline: 3px solid #2f2f2f;
+   border-radius: 10px;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0703;
+}
 
 .nav-link {
     color: #F7F7F7  !important;
@@ -21,10 +26,58 @@ img[alt='Logo']{
 }
 
 .nav-link:hover {
-    background-color: #3D3A50 !important;
+    background-color: #ffcc74cb !important;
 }
 
 .hamburger {
-    color: #F7F7F7 !important;
-    background-color: #F7F7F7 !important;
+    color: #FFCB74 !important;
+    background-color: #ffcc74cb !important;
+}
+
+.check {
+    height: 100vh;
+}
+
+footer {
+    height: 100%;
+    background-color: black;
+}
+
+.center {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.icons {
+    text-align: center;
+  }
+
+.fa-brands {
+    padding: 5px;
+}
+
+.copyright {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.cop{
+    display: contents;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
 }
