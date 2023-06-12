@@ -11,12 +11,13 @@ img[alt='Logo']{
 }
 
 img[alt='Logo']:hover {
-   outline: 3px solid #ffcc74cb;
+   outline: 3px solid #E8A45D;
    border-radius: 10px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #0d0703ff;
 }
 
 header {
@@ -66,7 +67,6 @@ p {
 }
 
 .aboutSection {
-    background-color: #E8A45D;
     height: fit-content;
     border-bottom: 1px solid black;
 }
@@ -79,13 +79,11 @@ p {
 }
 
 .featuredP {
-    background-color: #E8A45D;
     height: 100vh;
     border-bottom: 1px solid black;
 }
 
 .contact {
-    background-color: #E8A45D;
     height: 110vh;
 }
 
