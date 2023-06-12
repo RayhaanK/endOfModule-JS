@@ -4,7 +4,7 @@ const productImage = document.querySelector('#imageLink')
 const productDescription = document.querySelector('#description')
 const productPrice = document.querySelector('#price')
 
-let products = [
+localStorage.setItem('products', JSON.stringify([
     {
         id: 1,
         Title : "Xbox Series X",
@@ -52,8 +52,16 @@ let products = [
         Image:"kljskljfs" ,
         Date: new Date(),
         Amount: "1,199"
-    },
-]
+    }
+]))
+
+let prod = JSON.parse(localStorage.getItem('products'))
+console.log(prod);
+
+Object.keys(prod).forEach((item)=> {
+    
+})
+
 
 addProduct.addEventListener('click', (event) =>{
     event.preventDefault();
