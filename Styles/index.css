@@ -106,9 +106,13 @@ p {
     justify-content: space-evenly;
   }
 
-  .butn {
+  .butn1, .butn2 {
     padding: 0.4rem;
     width: 7rem;
+  }
+
+  .butn1 {
+    margin-right: 4px;
   }
 
 footer {
@@ -124,9 +128,12 @@ footer {
 }
 
 .icons {
-    
     text-align: center;
   }
+
+.fa-brands {
+    padding: 5px;
+}
 
 .copyright {
     color: white;
