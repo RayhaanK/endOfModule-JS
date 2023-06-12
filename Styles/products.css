@@ -33,3 +33,7 @@ body {
     color: #FFCB74 !important;
     background-color: #ffcc74cb !important;
 }
+
+.productList {
+    height: 100vh;
+}
