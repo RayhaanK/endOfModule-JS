@@ -38,10 +38,25 @@ body {
     height: 100vh;
 }
 
+table{     
+    width: 100% !important;
+}
+
+.con{
+    width: 70%;
+}
+
+.last{
+    width: 9rem;
+}
+
+
 footer {
     height: 100%;
     background-color: black;
 }
+
+
 
 .center {
     position: relative;
