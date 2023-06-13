@@ -63,10 +63,13 @@
     <section id="admin" class="adm">
       <div class="container-fluid">
         <h1 class="display-1 text-center text-white mb-2 text-decoration-underline p-4">Admin Interface</h1>
-        <div class="container d-flex justify-content-center mb-2">
-          <button type="button" class="addbtn mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Add Item
-          </button>
+        <div class="container-fluid">
+          <button class="btn1 float-start">Sort</button>
+          <div class="d-flex justify-content-center mb-2">
+            <button type="button" class="btn1 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Add Item
+            </button>
+          </div>
           
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -81,6 +84,8 @@
                   <input type="text" id="title">
                   <p>Description</p>
                   <input type="text" id="description">
+                  <p>Content</p>
+                  <input type="text" id="content">
                   <p>Image Link</p>
                   <input type="text" id="imageLink">
                   <p>Price</p>
