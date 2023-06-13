@@ -3,9 +3,9 @@ const productTitle = document.querySelector('#title')
 const productImage = document.querySelector('#imageLink')
 const productDescription = document.querySelector('#description')
 const productPrice = document.querySelector('#price')
+const productContent = document.querySelector('#content')
 
-
-localStorage.setItem('products', JSON.stringify([
+let productArray = localStorage.setItem('products', JSON.stringify([
     {
         id: 1,
         title : "Xbox Series X",
@@ -18,8 +18,8 @@ localStorage.setItem('products', JSON.stringify([
     {
         id: 2,
         title : "Xbox Series S",
-        description: "The Xbox Series S is a gaming console with a sleek and white design developed by Microsoft alongside the Xbox Series X, it is smaller, more affordable and great alternative to the Series X.",
-        content: "The Xbox Series S is all digital and is powered by a custom AMD Zen 2 processor with eight cores which clocks at a lower speed compared to the Series X. It's architecture allows up to 4 teraflops of graphical performance which still supports features such as ray tracing. The console consists of  10GB of GDDR6 RAM with a built-in solid stae drive of 512GB which allows for faster loading in times. It supports 1440p resolution with a refresh rate of 120fps. With this smaller design and cheaper alternative, you will be surprised with its powerful performance.",
+        description: "The Xbox Series S is a gaming console with a sleek and white design developed by Microsoft alongside the Xbox Series X.",
+        content: "The Xbox Series S is smaller, more affordable and great alternative to the Series X. The Xbox Series S is all digital and is powered by a custom AMD Zen 2 processor with eight cores which clocks at a lower speed compared to the Series X. It's architecture allows up to 4 teraflops of graphical performance which still supports features such as ray tracing. The console consists of  10GB of GDDR6 RAM with a built-in solid stae drive of 512GB which allows for faster loading in times. It supports 1440p resolution with a refresh rate of 120fps. With this smaller design and cheaper alternative, you will be surprised with its powerful performance.",
         image:"https://i.postimg.cc/dtjnWdMh/Xbox-Series-S-2.png" ,
         date: new Date(),
         amount: "6,999"
@@ -91,65 +91,88 @@ localStorage.setItem('products', JSON.stringify([
 
 let prod = JSON.parse(localStorage.getItem('products'))
 console.log(prod);
-Object.keys(prod).forEach((item) => {
-    let newName = prod[item]
-    let output = document.querySelector('#adminInput')
-    output.innerHTML += `
-    <tr>
-    <th><div class="tableRows">${newName.id}</th></div>
-    <td><div class="tableRows">${newName.title}</td></div>
-    <td><div class="tableRows"><img
-    src="${newName.image}"
-    alt="productImage"
-    loading="lazy"
-  /></div></td>
-    <td><div class="tableRows">${newName.description}</td></div>
-    <td><div class="tableRows">${newName.date}</td></div>
-    <td><div class="tableRows">R${newName.amount}</td></div>
-    <td><div class="tableRows"> <button type="button" class="addbtn mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Add Item
-  </button>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Item</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Title</p>
-          <input type="text" id="editTitle">
-          <p>Description</p>
-          <input type="text" id="editDescription">
-          <p>Image Link</p>
-          <input type="text" id="editImageLink">
-          <p>Price</p>
-          <input type="text" id="editPrice">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="updateProduct">Save changes</button>
+function render() {
+  Object.keys(prod).forEach((item) => {
+      let newName = prod[item]
+      let output = document.querySelector('#adminInput')
+      output.innerHTML += `
+      <tr>
+      <th><div class="tableRows">${newName.id}</th></div>
+      <td><div class="tableRows">${newName.title}</td></div>
+      <td><div class="tableRows"><img
+      src="${newName.image}"
+      alt="productImage"
+      loading="lazy"
+    /></div></td>
+      <td><div class="tableRows">${newName.description}</td></div>
+      <td><div class="tableRows">${newName.date}</td></div>
+      <td><div class="tableRows">R${newName.amount}</td></div>
+      <td><div class="tableRows"> <button type="button" class="btn1 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Edit Item
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Item</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Title</p>
+            <input type="text" id="editTitle">
+            <p>Description</p>
+            <input type="text" id="editDescription">
+            <p>Image Link</p>
+            <input type="text" id="editImageLink">
+            <p>Price</p>
+            <input type="text" id="editPrice">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="updateProduct">Save changes</button>
+          </div>
         </div>
       </div>
-    </div>
-  </div><button class="addbtn">Delete</button></td></div>
-    </tr>    
-    `
-})
+    </div><button class="btn1">Delete</button></td></div>
+      </tr>    
+      `
+  })
+}
+
+render()
 
 
 addProduct.addEventListener('click', (event) =>{
     event.preventDefault();
-    if(productTitle.value == ''){
-        alert('Title needs to be entered!')
-    } 
-    if (productDescription.value == '') {
-        alert("Description needs to be entered!")
+    // if(productTitle.value == ''){
+    //     alert('Title needs to be entered!')
+    // }
+    // if (productDescription.value == '') {
+    //     alert("Description needs to be entered!")
+    // } 
+    // if (productContent.value == '') {
+    //   alert("Content needs to be entered!")
+    // }
+    // if (productImage.value == '')
+    //     alert('Image Link is required!')
+    //     if (productPrice.value  == '') {
+    //       alert('Price needs to be entered!')
+    //     }
+    //   }
+
+    let newProduct = {
+      title : productTitle.value,
+      description: productDescription.value,
+      content: productContent.value,
+      image: productImage.value,
+      amount: productPrice.value
     }
-    if (productImage.value == '') {
-        alert('Image Link is required!')
-    }
-    if (productPrice.value  == '') {
-        alert('Price needs to be entered!')
-    }
+
+    prod.push(newProduct)
+
+    localStorage.setItem('products', JSON.stringify(productArray))
+
+    render()
+    console.log(prod);
 })
+
