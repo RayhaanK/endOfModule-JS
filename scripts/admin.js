@@ -52,7 +52,7 @@ localStorage.setItem('products', JSON.stringify([
         description: "The Dualsense 5,developed by Sony, brings new features and improved comfortablity. With the new haptic feedbacks and adaptive triggers and built in microphone, it brings a new immersion for your favourite games. The controller has a built in battery which can last up to 15 hours and can be charged using a USB type-C cable.It is also compatible with any headset that has a 3.5mm audio jack.",
         image:"https://i.postimg.cc/CxL6Vk7P/Dualsense5.webp" ,
         date: new Date(),
-        amount: "1,199"
+        amount: "1,599"
     },
     {
         id: 7,
@@ -87,17 +87,43 @@ Object.keys(prod).forEach((item) => {
     let output = document.querySelector('#adminInput')
     output.innerHTML += `
     <tr>
-    <th scope="col">${newName.id}</th>
-    <th scope="col">${newName.title}</th>
-    <th scope="col"><img
+    <th><div class="tableRows">${newName.id}</th></div>
+    <td><div class="tableRows">${newName.title}</td></div>
+    <td><div class="tableRows"><img
     src="${newName.image}"
     alt="productImage"
     loading="lazy"
-  /></th>
-    <th scope="col">${newName.description}</th>
-    <th scope="col">${newName.date}</th>
-    <th scope="col">R${newName.amount}</th>
-    <th scope="col">Actions</th>
+  /></div></td>
+    <td><div class="tableRows">${newName.description}</td></div>
+    <td><div class="tableRows">${newName.date}</td></div>
+    <td><div class="tableRows">R${newName.amount}</td></div>
+    <td><div class="tableRows"> <button type="button" class="addbtn mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Item
+  </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Item</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Title</p>
+          <input type="text" id="editTitle">
+          <p>Description</p>
+          <input type="text" id="editDescription">
+          <p>Image Link</p>
+          <input type="text" id="editImageLink">
+          <p>Price</p>
+          <input type="text" id="editPrice">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="updateProduct">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div><button>Delete</button></td></div>
     </tr>    
     `
 })
