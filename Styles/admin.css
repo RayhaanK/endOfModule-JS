@@ -56,6 +56,18 @@ body {
     text-align: center;
 }
 
+img[alt='productImage'] {
+    width: 11rem;
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.466));
+}
+
+th {
+    text-align: center;
+}
+td {
+    height: 160px;
+}
+
 footer {
     height: 100%;
     background-color: black;
@@ -84,16 +96,6 @@ a {
     text-decoration: none;
 }
 
-img[alt='productImage'] {
-    width: 11rem;
-}
-
-th {
-    text-align: center;
-}
-td {
-    height: 160px;
-}
 
 .foot{
     display: flex;

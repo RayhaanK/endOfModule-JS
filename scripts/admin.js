@@ -36,7 +36,7 @@ localStorage.setItem('products', JSON.stringify([
     {
         id: 4,
         title : "Nintendo Switch",
-        description: "The Nintendo Switch is a portable gaming console which looks like a tablet developed by Nintendo. This console can be played handheld or as a home console by connected it to the TV.",
+        description: "The Nintendo Switch is a portable gaming console which looks like a tablet developed by Nintendo. ",
         content: "The Nintendo Switch consists of a 6.2-inch touchscreen display with a resolution of 1280x720 pixels. When docked to a TV, it allows for gaming on a biger screen. One of the consoles standout features is its detachable Joy-Con controllers which can be attached to the side of the console for hadheld gaming or used seperately for multiplayer gaming. The Nintendo Switch is powered by a custom NVIDIA Tegra X1 system-on-a-chip which combines a quad-core ARM Cortex-A57 CPU and a 256-core NVIDIA Maxwell GPU. With the console's expandable storage through microSDXC cards, it allows users to install and store more games.",
         image: "https://i.postimg.cc/43YxLz0Z/nintendo-Switch.webp ",
         date: new Date(),
@@ -45,8 +45,8 @@ localStorage.setItem('products', JSON.stringify([
     {
         id: 5,
         title : "Xbox Wireless Controller",
-        description: "The Xbox Wireless Controller, developed by Microsoft, is designed for use with the Xbox gaming consoles. The new design allows for enhanced comfort. It can be used for PC as well.",
-        content: "It supports AA batteries with up to 40 hours of battery life. It is also compatible with any headset that has a 3.5mm audio jack.",
+        description: "The Xbox Wireless Controller, developed by Microsoft, is designed for use with the Xbox gaming consoles. ",
+        content: "The new design allows for enhanced comfort. It can be used for PC as well. It supports AA batteries with up to 40 hours of battery life. It is also compatible with any headset that has a 3.5mm audio jack.",
         image: "https://i.postimg.cc/PqCxvZsL/xbox-Wireless-Controller.png",
         date: new Date(),
         amount: "1,636"
@@ -54,8 +54,8 @@ localStorage.setItem('products', JSON.stringify([
     {
         id: 6,
         title : "Sony Playstation 5 Dualsense Edge Wireless Controller ",
-        description: "The Dualsense 5,developed by Sony, brings new features and improved comfortablity. With the new haptic feedbacks and adaptive triggers and built in microphone, it brings a new immersion for your favourite games. ",
-        content: "The controller has a built in battery which can last up to 15 hours and can be charged using a USB type-C cable.It is also compatible with any headset that has a 3.5mm audio jack.",
+        description: "The Dualsense 5,developed by Sony, brings new features and improved comfortablity.  ",
+        content: "With the new haptic feedbacks and adaptive triggers and built in microphone, it brings a new immersion for your favourite games. The controller has a built in battery which can last up to 15 hours and can be charged using a USB type-C cable.It is also compatible with any headset that has a 3.5mm audio jack.",
         image:"https://i.postimg.cc/CxL6Vk7P/Dualsense5.webp" ,
         date: new Date(),
         amount: "1,599"
@@ -64,7 +64,7 @@ localStorage.setItem('products', JSON.stringify([
         id: 7,
         title : "Diablo IV",
         description: "Developed and published by Blizzard Entertainment, Diablo IV is the fourth installment in the Diablo franchise. ",
-        content: "Diablo IV is an action role-playing game with a dark fantasy setting and addictive gameplay!.",
+        content: "Diablo IV is an action role-playing game with a dark fantasy setting and addictive gameplay!",
         image:"https://i.postimg.cc/vH5cRmKJ/diabloIV.jpg" ,
         date: new Date(),
         amount: "1,199"
@@ -132,7 +132,7 @@ Object.keys(prod).forEach((item) => {
         </div>
       </div>
     </div>
-  </div><button>Delete</button></td></div>
+  </div><button class="addbtn">Delete</button></td></div>
     </tr>    
     `
 })

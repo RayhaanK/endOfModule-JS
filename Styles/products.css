@@ -70,7 +70,7 @@ body {
 }
 
 .card-text {
-    height: 13rem;
+    height: 10rem;
     overflow: auto;
 }
 
@@ -79,11 +79,36 @@ body {
     justify-content: center;
 }
 
+.contentBtn {
+    background-color: #FFCB74;
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: none;
+}
+.contentBtn:hover {
+    background-color: #ffcc74c3;
+}
+
+.boldW {
+    font-weight: 600;
+}
+
 .cartBtn {
     background-color: #FFCB74;
     padding: 0.3rem;
     border-radius: 10px;
     border: none;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.cartBtn:hover {
+    background-color: #ffcc74c3;
+}
+
+.modalBtn {
+    display: flex;
+    justify-content: center;
 }
 
 footer {
