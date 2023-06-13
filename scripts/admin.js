@@ -52,7 +52,7 @@ localStorage.setItem('products', JSON.stringify([
         description: "The Dualsense 5,developed by Sony, brings new features and improved comfortablity. With the new haptic feedbacks and adaptive triggers and built in microphone, it brings a new immersion for your favourite games. The controller has a built in battery which can last up to 15 hours and can be charged using a USB type-C cable.It is also compatible with any headset that has a 3.5mm audio jack.",
         image:"https://i.postimg.cc/CxL6Vk7P/Dualsense5.webp" ,
         date: new Date(),
-        amount: "1,199"
+        amount: "1,599"
     },
     {
         id: 7,
@@ -87,17 +87,17 @@ Object.keys(prod).forEach((item) => {
     let output = document.querySelector('#adminInput')
     output.innerHTML += `
     <tr>
-    <th scope="col">${newName.id}</th>
-    <th scope="col">${newName.title}</th>
-    <th scope="col"><img
+    <th><div class="tableRows">${newName.id}</th></div>
+    <td><div class="tableRows">${newName.title}</td></div>
+    <td><div class="tableRows"><img
     src="${newName.image}"
     alt="productImage"
     loading="lazy"
-  /></th>
-    <th scope="col">${newName.description}</th>
-    <th scope="col">${newName.date}</th>
-    <th scope="col">R${newName.amount}</th>
-    <th scope="col">Actions</th>
+  /></div></td>
+    <td><div class="tableRows">${newName.description}</td></div>
+    <td><div class="tableRows">${newName.date}</td></div>
+    <td><div class="tableRows">R${newName.amount}</td></div>
+    <td><div class="tableRows"><button>Edit</button><button>Delete</button></td></div>
     </tr>    
     `
 })
