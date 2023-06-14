@@ -79,7 +79,7 @@ p {
 }
 
 .featuredP {
-    height: 100vh;
+    height: max-content;
     border-bottom: 1px solid black;
 }
 
@@ -94,6 +94,89 @@ p {
     height: 80vh;
     width: 100%;
   }
+
+  .productList {
+    height: max-content;
+}
+
+.cont {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.prodTitle {
+    font-size: 1.9rem !important;
+    height: 100px !important;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img{
+    height: 17rem;
+    width: 17rem;
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.466));
+}
+
+.prodImg {
+    background-size: cover !important;
+}
+
+.card-text {
+    height: 10rem;
+    overflow: auto;
+}
+
+.addCart {
+    display: flex;
+    justify-content: center;
+}
+
+.contentBtn {
+    background-color: #FFCB74;
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: none;
+}
+.contentBtn:hover {
+    background-color: #ffcc74c3;
+}
+
+.boldW {
+    font-weight: 600;
+
+}
+
+.boldP {
+    font-weight: 600;
+    color: black;
+}
+
+.cartBtn {
+    background-color: #FFCB74;
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: none;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.cartBtn:hover {
+    background-color: #ffcc74c3;
+}
+
+.modalBtn {
+    display: flex;
+    justify-content: center;
+}
   
   form {
     width: 70%;

@@ -135,14 +135,12 @@ function render() {
           </div>
         </div>
       </div>
-    </div><button class="btn1">Delete</button></td></div>
+    </div><button class="btn1" id="deleteBtn">Delete</button></td></div>
       </tr>    
       `
   })
 }
-
 render()
-
 
 addProduct.addEventListener('click', (event) =>{
     event.preventDefault();
@@ -157,11 +155,16 @@ addProduct.addEventListener('click', (event) =>{
         amount: productPrice.value
       }
       prod.push(newProduct)
+      console.log(prod);
     }
-    localStorage.setItem('products', JSON.stringify(productArray))
-    console.log(prod);
     render()
-    
-    
+    localStorage.setItem('products', JSON.stringify(productArray))
   })
+  
+
+  // function deleteProduct(event) {
+  //   productArray.splice(event, 1)
+  //   localStorage.setItem('products',JSON.stringify(productArray))
+  //   render()
+  // }
 

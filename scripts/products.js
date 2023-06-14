@@ -1,4 +1,3 @@
-
 let product = JSON.parse(localStorage.getItem('products'))
 console.log(product);
 
@@ -56,13 +55,6 @@ Object.keys(product).forEach((item) => {
               </div>
               `
             })
-
-// const addCart = document.querySelector('#addCartBtn')
-// addCart.addEventListener('click', () => {
-//     // event.preventDefault();
-//     console.log("clicked");
-//     alert('Item added To Cart')
-// })
 
 function addCheck(id) {
     console.log(id);
