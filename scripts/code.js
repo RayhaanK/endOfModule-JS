@@ -1,13 +1,13 @@
-const output = document.querySelector('#featPost')
+const output = document.querySelector("#featPost");
 
-let product = JSON.parse(localStorage.getItem('products'))
+let product = JSON.parse(localStorage.getItem("products"));
 console.log(product);
 
-let featuredProducts = (product.slice(0,3));
+let featuredProducts = product.slice(0, 3);
 console.log(featuredProducts);
 Object.keys(featuredProducts).forEach((item) => {
-    let newName = featuredProducts[item];
-    output.innerHTML += `
+  let newName = featuredProducts[item];
+  output.innerHTML += `
     <div class="col g-3 mt-4">
     <div class="card bg-dark-subtle">
     <h4 class="text-center prodTitle">${newName.title}</h4>
@@ -19,9 +19,11 @@ Object.keys(featuredProducts).forEach((item) => {
     />
     </div>
     <div class="card-body">
-          <p class="card-text">
-          "${newName.description}"
-          </p>
+        <div class="cardText">
+        <p class="card-text">
+        "${newName.description}"
+        </p>
+        </div>
           </div>
           <div>
               <p class= "amount text-center">
@@ -35,5 +37,5 @@ Object.keys(featuredProducts).forEach((item) => {
               </div>
               </div>  
               </div>
-              `
-            })
+              `;
+});

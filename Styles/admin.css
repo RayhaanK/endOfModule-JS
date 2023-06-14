@@ -51,6 +51,13 @@ body {
     background-color: #ffcc74c3;
 }
 
+.modal-body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .tableRows {
     display: flex;
     justify-content: center;
