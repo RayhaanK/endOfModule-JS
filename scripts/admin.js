@@ -5,7 +5,9 @@ const productDescription = document.querySelector('#description')
 const productPrice = document.querySelector('#price')
 const productContent = document.querySelector('#content')
 
-let productArray = localStorage.setItem('products', JSON.stringify([
+let productArray = JSON.parse(localStorage.getItem('products')) ? 
+                   JSON.parse(localStorage.getItem('products')) : 
+                   localStorage.setItem('products', JSON.stringify([
     {
         id: 1,
         title : "Xbox Series X",
@@ -144,35 +146,22 @@ render()
 
 addProduct.addEventListener('click', (event) =>{
     event.preventDefault();
-    // if(productTitle.value == ''){
-    //     alert('Title needs to be entered!')
-    // }
-    // if (productDescription.value == '') {
-    //     alert("Description needs to be entered!")
-    // } 
-    // if (productContent.value == '') {
-    //   alert("Content needs to be entered!")
-    // }
-    // if (productImage.value == '')
-    //     alert('Image Link is required!')
-    //     if (productPrice.value  == '') {
-    //       alert('Price needs to be entered!')
-    //     }
-    //   }
-
-    let newProduct = {
-      title : productTitle.value,
-      description: productDescription.value,
-      content: productContent.value,
-      image: productImage.value,
-      amount: productPrice.value
+    if (productTitle.value == '' || productDescription.value == '' ||productContent.value == '' || productImage.value == '' ) {
+      alert('Input needs to be entered!')
+    } else {
+      let newProduct = {
+        title : productTitle.value,
+        description: productDescription.value,
+        content: productContent.value,
+        image: productImage.value,
+        amount: productPrice.value
+      }
+      prod.push(newProduct)
     }
-
-    prod.push(newProduct)
-
     localStorage.setItem('products', JSON.stringify(productArray))
-
-    render()
     console.log(prod);
-})
+    render()
+    
+    
+  })
 
