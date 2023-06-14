@@ -130,9 +130,16 @@ p {
     background-size: cover !important;
 }
 
-.card-text {
+.cardText {
     height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: auto;
+}
+
+.card-text {
+    text-align: center;
 }
 
 .addCart {
@@ -172,6 +179,9 @@ p {
 .cartBtn:hover {
     background-color: #ffcc74c3;
 }
+
+
+
 
 .modalBtn {
     display: flex;
