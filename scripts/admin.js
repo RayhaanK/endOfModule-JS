@@ -75,19 +75,19 @@ function render() {
           </div>
           <div class="modal-body">
             <p>Title</p>
-            <input type="text" id="editTitle${item.id}">
+            <input type="text" id="editTitle${prod.id}">
             <p>Description</p>
-            <input type="text" id="editDescription${item.id}">
+            <input type="text" id="editDescription${prod.id}">
             <p>Content</p>
-            <input type="text" id="editContent${item.id}">
+            <input type="text" id="editContent${prod.id}">
             <p>Image Link</p>
-            <input type="text" id="editImageLink${item.id}">
+            <input type="text" id="editImageLink${prod.id}">
             <p>Price</p>
-            <input type="text" id="editPrice${item.id}">
+            <input type="text" id="editPrice${prod.id}">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn1" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn1" id="updateProduct" onclick="editItems()">Save changes</button>
+            <button type="button" class="btn1" id="updateProduct" onclick="editItem()">Save changes</button>
           </div>
         </div>
       </div>
@@ -127,20 +127,20 @@ addProduct.addEventListener("click", (event) => {
   render();
 });
 
-console.log(prod);
-function editItems(item){
-  console.log(item.id);
-  let beginning = prod.findIndex( p=>{
-      return p.id == item.id
+// edit Button
+function editItem(item) {
+  console.log(item);
+  let beginning = prod.findIndex((p) => {
+    return p.id == prod.id;
   });
-  this.title = document.querySelector(`#editTitle${item.id}`).value
-  this.description = document.querySelector(`#editDescription${item.id}`).value
-  this.image = document.querySelector(`#editImageLink${item.id}`).value
-  this.price = document.querySelector(`#editPrice${item.id}`).value
-  this.content = document.querySelector(`#editContent${item.id}`).value
-  prod[beginning] = Object.assign({}, this)
-  localStorage.setItem('products', JSON.stringify(prod))
-  location.reload()
- render()
+  this.title = document.querySelector(`#editTitle${prod.id}`).value;
+  this.description = document.querySelector(`#editDescription${prod.id}`).value;
+  this.image = document.querySelector(`#editImageLink${prod.id}`).value;
+  this.price = document.querySelector(`#editPrice${prod.id}`).value;
+  this.content = document.querySelector(`#editContent${prod.id}`).value;
+  prod[beginning] = Object.assign({}, this);
+  localStorage.setItem("products", JSON.stringify(prod));
+  location.reload();
+  render();
 }
 render();

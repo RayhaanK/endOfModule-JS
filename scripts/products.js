@@ -10,31 +10,29 @@ let checkoutProdList = [];
 let inAsc = true;
 sortBtn.addEventListener("click", (event) => {
   event.preventDefault();
-if(inAsc === true){
-  inAsc = false;
-  product = product.sort((a, b) => {
-    if (a.title < b.title) {
-      return -1;
-    } else if (a.title > b.title) {
-      return 1;
-    } 
-    else {
-      return 0;
-    }
-  });
-} else {
-  inAsc = true;
-  product = product.sort((a, b) => {
-    if (a.title < b.title) {
-      return 1;
-    } else if (a.title > b.title) {
-      return -1;
-    } 
-    else {
-      return 0;
-    }
-  });
-}
+  if (inAsc === true) {
+    inAsc = false;
+    product = product.sort((a, b) => {
+      if (a.title < b.title) {
+        return -1;
+      } else if (a.title > b.title) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  } else {
+    inAsc = true;
+    product = product.sort((a, b) => {
+      if (a.title < b.title) {
+        return 1;
+      } else if (a.title > b.title) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+  }
   render();
 });
 
@@ -43,8 +41,7 @@ function render() {
   product.forEach((item, index) => {
     // let newName = product[item];
     // console.log(newName);
-    output.innerHTML +=
-      `
+    output.innerHTML += `
       <div class="col g-3 mt-4">
       <div class="card bg-dark-subtle">
       <h4 class="text-center prodTitle">${item.title}</h4>
@@ -101,8 +98,8 @@ function render() {
 render();
 
 function addCheck(index) {
-  checkoutProdList.push(product[index])
-  console.log(product[index])
-  localStorage.setItem('checkout', JSON.stringify(checkoutProdList))
+  checkoutProdList.push(product[index]);
+  console.log(product[index]);
+  localStorage.setItem("checkout", JSON.stringify(checkoutProdList));
   console.log(checkoutProdList);
 }
