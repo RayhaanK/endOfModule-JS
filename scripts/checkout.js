@@ -34,4 +34,18 @@ function deleteProduct(event) {
   localStorage.setItem("products", JSON.stringify(checkout));
 }
 
+
+
+function addAmount(){
+    let sumProducts = document.querySelector('#amountTotal')
+    let productTotal = checkout.reduce((item1, item2) => {
+        return (item1 + item2.amount)
+    }, 0);
+
+sumProducts.innerHTML +=
+`
+<td><div class="tableRows">R${productTotal}</td></div>
+`
+}
+addAmount();
 render()

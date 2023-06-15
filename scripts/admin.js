@@ -75,19 +75,19 @@ function render() {
           </div>
           <div class="modal-body">
             <p>Title</p>
-            <input type="text" id="editTitle">
+            <input type="text" id="editTitle${item.id}">
             <p>Description</p>
-            <input type="text" id="editDescription">
+            <input type="text" id="editDescription${item.id}">
             <p>Content</p>
-            <input type="text" id="editContent">
+            <input type="text" id="editContent${item.id}">
             <p>Image Link</p>
-            <input type="text" id="editImageLink">
+            <input type="text" id="editImageLink${item.id}">
             <p>Price</p>
-            <input type="text" id="editPrice">
+            <input type="text" id="editPrice${item.id}">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn1" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn1" id="updateProduct">Save changes</button>
+            <button type="button" class="btn1" id="updateProduct" onclick="editItems()">Save changes</button>
           </div>
         </div>
       </div>
@@ -126,4 +126,21 @@ addProduct.addEventListener("click", (event) => {
   }
   render();
 });
+
+console.log(prod);
+function editItems(item){
+  console.log(item.id);
+  let beginning = prod.findIndex( p=>{
+      return p.id == item.id
+  });
+  this.title = document.querySelector(`#editTitle${item.id}`).value
+  this.description = document.querySelector(`#editDescription${item.id}`).value
+  this.image = document.querySelector(`#editImageLink${item.id}`).value
+  this.price = document.querySelector(`#editPrice${item.id}`).value
+  this.content = document.querySelector(`#editContent${item.id}`).value
+  prod[beginning] = Object.assign({}, this)
+  localStorage.setItem('products', JSON.stringify(prod))
+  location.reload()
+ render()
+}
 render();

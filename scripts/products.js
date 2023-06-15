@@ -6,8 +6,8 @@ let checkoutProdList = [];
 
 // render();
 
-let inAsc = true;
 // Sort Button
+let inAsc = true;
 sortBtn.addEventListener("click", (event) => {
   event.preventDefault();
 if(inAsc === true){
