@@ -35,7 +35,7 @@ body {
 }
 
 .check {
-    height: max-content;
+    min-height: 100vh;
 }
 
 table{     
@@ -43,7 +43,7 @@ table{
 }
 
 .con{
-    width: fit-content;
+    height: max-content;
 }
 
 .last{
@@ -53,7 +53,7 @@ table{
 img[alt='productImage'] {
     width: 11rem;
     filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.466));
-}
+}   
 
 .tableRows {
     display: flex;
@@ -90,10 +90,8 @@ td {
 
 }
 
-
-
 footer {
-    height: 100%;
+    margin-top: auto;
     background-color: black;
 }
 

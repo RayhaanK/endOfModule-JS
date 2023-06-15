@@ -22,7 +22,7 @@ let productArray = JSON.parse(localStorage.getItem("products"))
           description:
             "The Xbox Series S is a gaming console with a sleek and white design developed by Microsoft alongside the Xbox Series X.",
             content:
-            "The Xbox Series S is smaller, more affordable and great alternative to the Series X. The Xbox Series S is all digital and is powered by a custom AMD Zen 2 processor with eight cores which clocks at a lower speed compared to the Series X. It's architecture allows up to 4 teraflops of graphical performance which still supports features such as ray tracing. The console consists of  10GB of GDDR6 RAM with a built-in solid stae drive of 512GB which allows for faster loading in times. It supports 1440p resolution with a refresh rate of 120fps. With this smaller design and cheaper alternative, you will be surprised with its powerful performance.",
+            "The Xbox Series S is smaller, more affordable and great alternative to the Series X. The Xbox Series S is all digital and is powered by a custom AMD Zen 2 processor with eight cores which clocks at a lower speed compared to the Series X. It's architecture allows up to 4 teraflops of graphical performance which still supports features such as ray tracing. The console consists of  10GB of GDDR6 RAM with a built-in solid state drive of 512GB which allows for faster loading in times. It supports 1440p resolution with a refresh rate of 120fps. With this smaller design and cheaper alternative, you will be surprised with its powerful performance.",
             image: "https://i.postimg.cc/dtjnWdMh/Xbox-Series-S-2.png",
             date: new Date(),
             amount: 6.999
@@ -33,7 +33,7 @@ let productArray = JSON.parse(localStorage.getItem("products"))
           description:
           "The Playstation 5 is a gaming console developed by Sony Interactive Entertainment. It has a sleek and futuristic design with a two tone colour scheme of white and black.",
           content:
-            " It Playstation 5 is powered by a custom AMD Zen 2 processor with eight cores allowing for faster loading in times. The Playstation 5 consists of 16GB of GDDR6 RAM allowing for smooth performance. It also includes an ultra-fast solid-state drive of 825GB. The console supports gaming at up to 4K resolution with a refresh rate of 120 frames per second. With a console that supports a huge library with both multi-platform games and exclusives, the fun will never die out.",
+            " The Playstation 5 is powered by a custom AMD Zen 2 processor with eight cores allowing for faster loading in times. The Playstation 5 consists of 16GB of GDDR6 RAM allowing for smooth performance. It also includes an ultra-fast solid-state drive of 825GB. The console supports gaming at up to 4K resolution with a refresh rate of 120 frames per second. With a console that supports a huge library with both multi-platform games and exclusives, the fun will never die out.",
           image: "https://i.postimg.cc/Kc6v9k7h/playstation5-2.png",
           date: new Date(),
           amount: 12.999
@@ -44,7 +44,7 @@ let productArray = JSON.parse(localStorage.getItem("products"))
           description:
             "The Nintendo Switch is a portable gaming console which looks like a tablet developed by Nintendo. ",
           content:
-            "The Nintendo Switch consists of a 6.2-inch touchscreen display with a resolution of 1280x720 pixels. When docked to a TV, it allows for gaming on a biger screen. One of the consoles standout features is its detachable Joy-Con controllers which can be attached to the side of the console for hadheld gaming or used seperately for multiplayer gaming. The Nintendo Switch is powered by a custom NVIDIA Tegra X1 system-on-a-chip which combines a quad-core ARM Cortex-A57 CPU and a 256-core NVIDIA Maxwell GPU. With the console's expandable storage through microSDXC cards, it allows users to install and store more games.",
+            "The Nintendo Switch consists of a 6.2-inch touchscreen display with a resolution of 1280x720 pixels. When docked to a TV, it allows for gaming on a bigger screen. One of the console's standout features is it's detachable Joy-Con controllers which can be attached to the side of the console for hadheld gaming or used seperately for multiplayer gaming. The Nintendo Switch is powered by a custom NVIDIA Tegra X1 system-on-a-chip which combines a quad-core ARM Cortex-A57 CPU and a 256-core NVIDIA Maxwell GPU. With the console's expandable storage through microSDXC cards, it allows users to install and store more games.",
           image: "https://i.postimg.cc/43YxLz0Z/nintendo-Switch.webp ",
           date: new Date(),
           amount: 7.499
@@ -88,7 +88,7 @@ let productArray = JSON.parse(localStorage.getItem("products"))
           description:
             "Developed and Techland and published by Techland Publishing, it is the sequel to Dying Light.",
           content:
-            " Dying Light 2 takes place in a post-apocalyptic open-world filled with infected creatures. Aiden Caldwell, the main character, is an infected survivor with exceptional parkour and combat skills which he has use to combat evil.",
+            " Dying Light 2 takes place in a post-apocalyptic open-world filled with infected creatures. Aiden Caldwell, the main character, is an infected survivor with exceptional parkour and combat skills which he has to use to combat evil.",
             image: "https://i.postimg.cc/d0mwVkFC/dying-Light2.webp",
           date: new Date(),
           amount: 1.099
