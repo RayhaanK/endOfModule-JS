@@ -87,13 +87,13 @@ body {
 }
 
 .contentBtn {
-    background-color: #FFCB74;
+    background-color: #F7F7F7;
     padding: 0.3rem;
     border-radius: 10px;
     border: none;
 }
 .contentBtn:hover {
-    background-color: #ffcc74c3;
+    background-color: #f7f7f788;
 }
 
 .boldW {
@@ -101,7 +101,7 @@ body {
 }
 
 .cartBtn {
-    background-color: #FFCB74;
+    background-color: #F7F7F7;
     padding: 0.3rem;
     border-radius: 10px;
     border: none;
@@ -110,18 +110,18 @@ body {
 }
 
 .cartBtn:hover {
-    background-color: #ffcc74c3;
+    background-color: #f7f7f788;
 }
 
 .btn1 {
-    background-color: #FFCB74;
+    background-color: #F7F7F7;
     padding: 0.3rem;
     border-radius: 10px;
     border: none;
 }
 
 .btn1:hover {
-    background-color: #ffcc74c3;
+    background-color: #f7f7f7d3;  
 }
 
 .modalBtn {
