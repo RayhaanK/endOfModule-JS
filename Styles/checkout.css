@@ -11,7 +11,7 @@ img[alt='Logo']{
 }
 
 img[alt='Logo']:hover {
-   outline: 3px solid #2f2f2f;
+   outline: 3px solid #ffcc74cb;
    border-radius: 10px;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .check {
-    height: 100vh;
+    height: max-content;
 }
 
 table{     
@@ -43,20 +43,59 @@ table{
 }
 
 .con{
-    width: 70%;
+    width: fit-content;
 }
 
 .last{
     width: 9rem;
 }
 
+img[alt='productImage'] {
+    width: 11rem;
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.466));
+}
+
+.tableRows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+td {
+    height: 160px;
+}
+
+.btn1 {
+    background-color: #F7F7F7;
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn1:hover {
+    background-color: #f7f7f788;
+}
+
+.dltBtn {
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+
 
 footer {
     height: 100%;
     background-color: black;
 }
-
-
 
 .center {
     position: relative;
