@@ -3,6 +3,23 @@ let output = document.querySelector("#checkOutput");
 console.log(checkout);
 
 
+// Delete Button
+function deleteButton() {
+  deleteBtn = [...document.querySelectorAll("#deleteBtn")];
+  deleteBtn.forEach((item) => {
+    item.addEventListener("click", deleteProduct);
+  });
+}
+
+function deleteProduct(event) {
+  output.innerHTML = "";
+  let startingItem = deleteBtn.indexOf(event.target);
+  checkout.splice(startingItem, 1);
+  localStorage.setItem("checkout", JSON.stringify(checkout));
+  render()
+}
+
+
 // output.innerHTML = ""
 function render() {
   checkout.forEach((item) => {
@@ -16,22 +33,10 @@ function render() {
           /></div></td>
             <td><div class="tableRows">${item.description}</td></div>
             <td><div class="tableRows">R${item.amount}</td></div>
-            <td><div class="dltBtn"><button class="btn1" id="deleteBtn">Delete</button></td></div></td>
+            <td><div class="dltBtn"><button class="btn1" id="deleteBtn">Delete</button></td></div>
         `;
   });
-}
-function deleteButton() {
-  deleteBtn = [...document.querySelectorAll("#deleteBtn")];
-  deleteBtn.forEach((item) => {
-    item.addEventListener("click", deleteProduct);
-  });
-}
-
-function deleteProduct(event) {
-  output.innerHTML = "";
-  let startingItem = deleteBtn.indexOf(event.target);
-  checkout.splice(startingItem, 1);
-  localStorage.setItem("products", JSON.stringify(checkout));
+  deleteButton()
 }
 
 
@@ -47,5 +52,6 @@ sumProducts.innerHTML +=
 <td><div class="tableRows">R${productTotal}</td></div>
 `
 }
+deleteButton()
 addAmount();
 render()

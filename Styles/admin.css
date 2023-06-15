@@ -62,6 +62,18 @@ body {
     background-color: #f7f7f7d3;  
 }
 
+.btn3 {
+    background-color: #F7F7F7;
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10rem;
+}
+
+.btn3:hover {
+    background-color: #f7f7f7d3; 
+}
+
 .modal-body {
     text-align: center;
     display: flex;
@@ -69,7 +81,16 @@ body {
     flex-direction: column;
 }
 
-.tableRows {
+table{     
+    width: 100% !important;
+}
+
+.con{
+    width: fit-content;
+}
+
+
+.tableRows {    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,4 +158,10 @@ a {
     justify-content: start;
     align-items: center;
     width: 100%;
+}
+
+@media screen and (max-width:650px) {
+    .btn3 {
+        margin-right: 0;
+    }
 }
