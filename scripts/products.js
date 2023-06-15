@@ -11,10 +11,11 @@ sortBtn.addEventListener("click", (event) => {
   product = product.sort((a, b) => {
     if (a.title < b.title) {
       return -1;
+    } else if (a.title > b.title) {
+      return -1;
     } else {
-      return 1;
+      return 0;
     }
-    return 0;
   });
   render();
 });
@@ -51,7 +52,7 @@ function render() {
       newName.id +
       `" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content bg-dark-subtle">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">About</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
