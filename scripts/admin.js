@@ -6,8 +6,10 @@ const productPrice = document.querySelector("#price");
 const productContent = document.querySelector("#content");
 let deleteBtn;
 let sortBtn = document.querySelector("#sort");
-let productArray = JSON.parse(localStorage.getItem('products'))
-let tempID = productArray[productArray.length-1] ? productArray[productArray.length-1].id + 1: 1;
+let productArray = JSON.parse(localStorage.getItem("products"));
+let tempID = productArray[productArray.length - 1]
+  ? productArray[productArray.length - 1].id + 1
+  : 1;
 let prod = JSON.parse(localStorage.getItem("products"));
 console.log(prod);
 const output = document.querySelector("#adminInput");
@@ -41,27 +43,26 @@ sortBtn.addEventListener("click", (event) => {
     } else {
       return 0;
     }
-
   });
   render();
 });
 
 function render() {
   output.innerHTML = "";
-  Object.keys(prod).forEach((item) => {
-    let newName = prod[item];
+  prod.forEach((item) => {
+    // let item = prod[item];
     output.innerHTML += `
       <tr>
-      <th><div class="tableRows">${newName.id}</th></div>
-      <td><div class="tableRows">${newName.title}</td></div>
+      <th><div class="tableRows">${item.id}</th></div>
+      <td><div class="tableRows">${item.title}</td></div>
       <td><div class="tableRows"><img
-      src="${newName.image}"
+      src="${item.image}"
       alt="productImage"
       loading="lazy"
     /></div></td>
-      <td><div class="tableRows">${newName.description}</td></div>
-      <td><div class="tableRows">${newName.date}</td></div>
-      <td><div class="tableRows">R${newName.amount}</td></div>
+      <td><div class="tableRows">${item.description}</td></div>
+      <td><div class="tableRows">${item.date}</td></div>
+      <td><div class="tableRows">R${item.amount}</td></div>
       <td><div class="tableRows"> <button type="button" class="btn1 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal2">
       Edit Item
     </button>
