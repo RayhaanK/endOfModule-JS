@@ -62,58 +62,87 @@
 
     <section id="admin" class="adm">
       <div class="container-fluid">
-        <h1 class="display-1 text-center text-white mb-2 text-decoration-underline p-4">Admin Interface</h1>
+        <h1
+          class="display-1 text-center text-white mb-2 text-decoration-underline p-4"
+        >
+          Admin Interface
+        </h1>
         <div class="container-fluid">
-          <button class="btn2 float-start" id="sort">Sort By ID(asc/desc)</button>
+          <button class="btn2 float-start" id="sort">
+            Sort By ID(asc/desc)
+          </button>
           <div class="d-flex justify-content-center mb-2">
-            <button type="button" class="btn3 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button
+              type="button"
+              class="btn3 mb-3"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
               Add Item
             </button>
           </div>
-          
+
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
             <div class="modal-dialog">
               <div class="modal-content bg-dark-subtle">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Add Item</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Add Item
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">
                   <p>Title</p>
-                  <input type="text" id="title">
+                  <input type="text" id="title" />
                   <p>Description</p>
-                  <input type="text" id="description">
+                  <input type="text" id="description" />
                   <p>Content</p>
-                  <input type="text" id="content">
+                  <input type="text" id="content" />
                   <p>Image Link</p>
-                  <input type="text" id="imageLink">
+                  <input type="text" id="imageLink" />
                   <p>Price</p>
-                  <input type="text" id="price">
+                  <input type="text" id="price" />
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn1" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn1" id="addProduct">Save changes</button>
+                  <button type="button" class="btn1" data-bs-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="button" class="btn1" id="addProduct">
+                    Save changes
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="container-fluid con">
-          <table class="table table-bordered border-black table-secondary table-hover">
+          <table
+            class="table table-bordered border-black table-secondary table-hover w-auto"
+          >
             <thead>
               <tr>
-                <th scope="col">ID#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Image</th>
-                <th scope="col">Description</th>
-                <th scope="col">Date</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Actions</th>
+                <th scope="col" class="heading">ID#</th>
+                <th scope="col" class="heading">Title</th>
+                <th scope="col" class="heading">Image</th>
+                <th scope="col" class="heading">Description</th>
+                <th scope="col" class="heading">Date</th>
+                <th scope="col" class="heading">Amount</th>
+                <th scope="col" class="heading">Actions</th>
               </tr>
             </thead>
-            <tbody id="adminInput">
-            </tbody>
+            <tbody id="adminInput"></tbody>
           </table>
         </div>
       </div>
@@ -134,13 +163,13 @@
       <div class="cop">
         <p class="copyright">Copyright &copy Rayhaan Khan</p>
       </div>
-    </footer> 
+    </footer>
 
-        <!-- Fontawesome link -->
-        <script
-        src="https://kit.fontawesome.com/77ffe626e4.js"
-        crossorigin="anonymous"
-      ></script>
+    <!-- Fontawesome link -->
+    <script
+      src="https://kit.fontawesome.com/77ffe626e4.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

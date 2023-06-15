@@ -2,7 +2,6 @@ let checkout = JSON.parse(localStorage.getItem("checkout"));
 let output = document.querySelector("#checkOutput");
 console.log(checkout);
 
-
 // Delete Button
 function deleteButton() {
   deleteBtn = [...document.querySelectorAll("#deleteBtn")];
@@ -16,9 +15,9 @@ function deleteProduct(event) {
   let startingItem = deleteBtn.indexOf(event.target);
   checkout.splice(startingItem, 1);
   localStorage.setItem("checkout", JSON.stringify(checkout));
-  render()
+  location.reload();
+  render();
 }
-
 
 // output.innerHTML = ""
 function render() {
@@ -36,22 +35,19 @@ function render() {
             <td><div class="dltBtn"><button class="btn1" id="deleteBtn">Delete</button></td></div>
         `;
   });
-  deleteButton()
+  deleteButton();
 }
 
+function addAmount() {
+  let sumProducts = document.querySelector("#amountTotal");
+  let productTotal = checkout.reduce((item1, item2) => {
+    return item1 + item2.amount;
+  }, 0);
 
-
-function addAmount(){
-    let sumProducts = document.querySelector('#amountTotal')
-    let productTotal = checkout.reduce((item1, item2) => {
-        return (item1 + item2.amount)
-    }, 0);
-
-sumProducts.innerHTML +=
-`
+  sumProducts.innerHTML += `
 <td><div class="tableRows">R${productTotal}</td></div>
-`
+`;
 }
-deleteButton()
+deleteButton();
 addAmount();
-render()
+render();
