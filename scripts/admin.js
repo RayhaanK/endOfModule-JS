@@ -138,6 +138,7 @@ function editItem(productId) {
     prod[beginning].amount = document.querySelector(`#editPrice${productId}`).value;
     prod[beginning].content = document.querySelector(`#editContent${productId}`).value;
     localStorage.setItem("products", JSON.stringify(prod));
+    location.reload()
     render();
   } else {
     console.log("Product not found for editing.");
