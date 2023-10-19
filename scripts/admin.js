@@ -143,20 +143,28 @@ addProduct.addEventListener("click", (event) => {
 //   location.reload();
 //   render();
 // }
-function editItem(productId) {
-  let beginning = prod.findIndex((p) => p.id === productId);
+function editItem(item) {
+  let beginning = prod.findIndex((p) => p.id === item.id);
 
   if (beginning !== -1) {
-    prod[beginning].title = document.querySelector(`#editTitle${productId}`).value;
-    prod[beginning].description = document.querySelector(`#editDescription${productId}`).value;
-    prod[beginning].image = document.querySelector(`#editImageLink${productId}`).value;
-    prod[beginning].amount = document.querySelector(`#editPrice${productId}`).value;
-    prod[beginning].content = document.querySelector(`#editContent${productId}`).value;
+    const editTitleInput = document.querySelector(`#editTitle${item.id}`);
+    const editDescriptionInput = document.querySelector(`#editDescription${item.id}`);
+    const editImageLinkInput = document.querySelector(`#editImageLink${item.id}`);
+    const editPriceInput = document.querySelector(`#editPrice${item.id}`);
+    const editContentInput = document.querySelector(`#editContent${item.id}`);
+
+    prod[beginning].title = editTitleInput.value;
+    prod[beginning].description = editDescriptionInput.value;
+    prod[beginning].image = editImageLinkInput.value;
+    prod[beginning].amount = editPriceInput.value;
+    prod[beginning].content = editContentInput.value;
+
     localStorage.setItem("products", JSON.stringify(prod));
     render();
   } else {
     console.log("Product not found for editing.");
   }
 }
+
 
 render();
