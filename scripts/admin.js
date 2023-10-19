@@ -128,42 +128,20 @@ addProduct.addEventListener("click", (event) => {
 });
 
 // edit Button
-// function editItem(item) {
-//   console.log(item);
-//   let beginning = prod.findIndex((p) => {
-//     return p.id == prod.id;
-//   });
-//   this.title = document.querySelector(`#editTitle${item.id}`).value;
-//   this.description = document.querySelector(`#editDescription${item.id}`).value;
-//   this.image = document.querySelector(`#editImageLink${item.id}`).value;
-//   this.price = document.querySelector(`#editPrice${item.id}`).value;
-//   this.content = document.querySelector(`#editContent${item.id}`).value;
-//   prod[beginning] = Object.assign({}, this);
-//   localStorage.setItem("products", JSON.stringify(prod));
-//   location.reload();
-//   render();
-// }
 function editItem(item) {
-  let beginning = prod.findIndex((p) => p.id === item.id);
-
-  if (beginning !== -1) {
-    const editTitleInput = document.querySelector(`#editTitle${item.id}`);
-    const editDescriptionInput = document.querySelector(`#editDescription${item.id}`);
-    const editImageLinkInput = document.querySelector(`#editImageLink${item.id}`);
-    const editPriceInput = document.querySelector(`#editPrice${item.id}`);
-    const editContentInput = document.querySelector(`#editContent${item.id}`);
-
-    prod[beginning].title = editTitleInput.value;
-    prod[beginning].description = editDescriptionInput.value;
-    prod[beginning].image = editImageLinkInput.value;
-    prod[beginning].amount = editPriceInput.value;
-    prod[beginning].content = editContentInput.value;
-
-    localStorage.setItem("products", JSON.stringify(prod));
-    render();
-  } else {
-    console.log("Product not found for editing.");
-  }
+  console.log(item);
+  let beginning = prod.findIndex((p) => {
+    return p.id == prod.id;
+  });
+  this.title = document.querySelector(`#editTitle${item.id}`).value;
+  this.description = document.querySelector(`#editDescription${item.id}`).value;
+  this.image = document.querySelector(`#editImageLink${item.id}`).value;
+  this.price = document.querySelector(`#editPrice${item.id}`).value;
+  this.content = document.querySelector(`#editContent${item.id}`).value;
+  prod[beginning] = Object.assign({}, this);
+  localStorage.setItem("products", JSON.stringify(prod));
+  location.reload();
+  render();
 }
 
 
