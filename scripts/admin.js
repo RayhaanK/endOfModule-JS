@@ -87,7 +87,7 @@ function render() {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn1" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn1" id="updateProduct" onclick="editItem(item.id)">Save changes</button>
+            <button type="button" class="btn1" id="updateProduct" onclick="editItem(${item.id})">Save changes</button>
           </div>
         </div>
       </div>
@@ -128,19 +128,35 @@ addProduct.addEventListener("click", (event) => {
 });
 
 // edit Button
-function editItem(item) {
-  console.log(item);
-  let beginning = prod.findIndex((p) => {
-    return p.id == prod.id;
-  });
-  this.title = document.querySelector(`#editTitle${item.id}`).value;
-  this.description = document.querySelector(`#editDescription${item.id}`).value;
-  this.image = document.querySelector(`#editImageLink${item.id}`).value;
-  this.price = document.querySelector(`#editPrice${item.id}`).value;
-  this.content = document.querySelector(`#editContent${item.id}`).value;
-  prod[beginning] = Object.assign({}, this);
-  localStorage.setItem("products", JSON.stringify(prod));
-  location.reload();
-  render();
+// function editItem(item) {
+//   console.log(item);
+//   let beginning = prod.findIndex((p) => {
+//     return p.id == prod.id;
+//   });
+//   this.title = document.querySelector(`#editTitle${item.id}`).value;
+//   this.description = document.querySelector(`#editDescription${item.id}`).value;
+//   this.image = document.querySelector(`#editImageLink${item.id}`).value;
+//   this.price = document.querySelector(`#editPrice${item.id}`).value;
+//   this.content = document.querySelector(`#editContent${item.id}`).value;
+//   prod[beginning] = Object.assign({}, this);
+//   localStorage.setItem("products", JSON.stringify(prod));
+//   location.reload();
+//   render();
+// }
+function editItem(productId) {
+  let beginning = prod.findIndex((p) => p.id === productId);
+
+  if (beginning !== -1) {
+    prod[beginning].title = document.querySelector(`#editTitle${productId}`).value;
+    prod[beginning].description = document.querySelector(`#editDescription${productId}`).value;
+    prod[beginning].image = document.querySelector(`#editImageLink${productId}`).value;
+    prod[beginning].amount = document.querySelector(`#editPrice${productId}`).value;
+    prod[beginning].content = document.querySelector(`#editContent${productId}`).value;
+    localStorage.setItem("products", JSON.stringify(prod));
+    render();
+  } else {
+    console.log("Product not found for editing.");
+  }
 }
+
 render();
